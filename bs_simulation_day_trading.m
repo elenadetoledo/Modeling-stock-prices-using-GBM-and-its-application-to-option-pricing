@@ -1,5 +1,5 @@
 function [V, Vex, ster, S0, actual_ST, error, vol, cpt, end_date] = OPT_bs_simulation_dayt(filename,start_min, ndaystraining, t0, K, T_mins, r, M)
-    
+    % Filename denotes the csv containing minute-by-minute data
     V = [];
     Vex = [];
     ster = [];
