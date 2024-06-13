@@ -1,7 +1,6 @@
-function [S_onesimulation, S_manysimulations, S_mean, S_median, S_mode] = fmodel2(start_date_test, ndaystraining, ndayspredicting, M, callibration_option, images, Z, z)
-    %MODEL 2: initial step S(i-1). (t-T0) constant, =1.muo & sigmao are constant
-    %For the callibration option, choose 1 for using fitdist, choose 2 to use
-    %the methods explained in Farida (sample mean, sample standard deviation)
+function [S_onesimulation, S_manysimulations, S_mean, S_median, S_mode] = prediction_model_days(start_date_test, ndaystraining, ndayspredicting, M, callibration_option, images, Z, z)
+    %Strategy: initial step S(i-1). (t-T0) constant, =1.muo & sigmao are constant
+    %For the callibration option, choose 1 to use fitdist, choose 2 to use sample average and std dev of arithmetic returns
     %Show images flag. images==0 no images, images==1 show images
     final_image=1; % Change to 0 if you dont want to see any images
     if Z == 0
