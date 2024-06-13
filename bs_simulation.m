@@ -15,11 +15,9 @@ function [V, Vex, ster, S0, actual_ST, error, vol, cpt, end_date] = OPT_bs_simul
         % Start timing the execution
         ndayspredicting = T_days;
         T_days = T_days / 365;
-        warning('off', 'stats:jbtest:PTooBig');
-        warning('off', 'stats:jbtest:PTooSmall');
         warning('off', 'MATLAB:table:ModifiedAndSavedVarnames');
     
-        filename_5years = '..\data\data_AAPL_5years_27april2019_27april2024.csv';
+        filename_5years = ''; %Include here the path to the file containing daily data
         dataTable_total = readtable(filename_5years);
         closeData_total = dataTable_total.Close;
         datesData_total = dataTable_total.Date;
